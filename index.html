@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+    <title>拔蘿蔔</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        html{
+            height: 100vh;
+            width: 100%;
+           overflow-y: hidden;
+        }
+        .sky{
+            background-color: darkturquoise;
+            height: 85vh;
+            position: relative;
+            z-index: -2;
+        }
+        .sunny{
+            background-color: yellow;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            position: relative;
+            left: 5rem;
+            top: 4rem;
+        }
+        .height-robo{
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 50%;
+            font-size: 96px;
+            letter-spacing: 5px;
+            text-align: center;
+            animation-name: heightrobo;
+            animation-duration: 11s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes heightrobo {
+            0%   { color:red; }
+            25%  {color:yellow; transform: scale(1.4);}
+            50%  { color: blue;}
+            75%  {color:orange; transform: scale(1.4);}
+            100%  { color: green;}
+        }
+        .black-glass-left{
+            height: 30px;
+            width: 45px;
+            background-color: black;
+            position: absolute;
+            top: 20%;
+            left: 15%;
+        }
+        .black-glass-center{
+            height: 10px;
+            width: 60px;
+            background-color: black;
+            position: absolute;
+            top: 25%;
+            left: 35%;
+        }
+        .mouse{
+            height: 60px;
+            width: 100px;
+            background-color: black;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            position: absolute;
+            bottom: 18%;
+            left: 25%;
+        }
+        .teeth{
+            height: 20px;
+            width: 30px;
+            background-color: white;
+            position: absolute;
+            bottom: 38%;
+            left: 42%;
+        }
+        .tongue{
+            width: 70px;
+            height: 30px;
+            background-color: red;
+            position: absolute;
+            bottom: 17%;
+            border-bottom-left-radius: 50%;
+            left: 32%;
+            border-bottom-right-radius: 50%;
+        }
+        .black-glass-right{
+            height: 30px;
+            width: 45px;
+            background-color: black;
+            position: absolute;
+            top: 20%;
+            right: 15%;
+        }
+        .sunny-one{
+            width: 75px;
+            height: 15px;
+            background-color: yellow;
+            position: absolute;
+            right: -36%;
+            transform: rotate(-26deg);
+            top: 5%;
+        }
+        .sunny-two{
+            width: 75px;
+            height: 15px;
+            background-color: yellow;
+            position: absolute;
+            right: -32%;
+            transform: rotate(39deg);
+            top: 97%;
+        }
+        .sunny-three{
+            width: 75px;
+            height: 15px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(-40deg);
+            top: 97%;
+            right: 93%;
+        }
+        .sunny-four{
+            width: 75px;
+            height: 15px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(32deg);
+            top: 1%;
+            right: 93%;
+        }
+        .sunny-five{
+            width: 75px;
+            height: 15px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(90deg);
+            top: -31%;
+            right: 35%;
+        }
+         .sunny-six{
+            width: 75px;
+            height: 15px;
+            background-color: yellow;
+            position: absolute;
+            transform: rotate(90deg);
+            bottom: -31%;
+            right: 35%;
+        }
+        
+        .wind1{
+            background-color: white;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 12%;
+            right: 20%;
+            border-radius: 15px;
+        }
+        .wind2{
+            background-color: white;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 12%;
+            right: 35%;
+            border-radius: 15px;
+        }
+        .wind3{
+            background-color: white;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 12%;
+            right: 50%;
+            border-radius: 15px;
+        }
+        .wind4{
+            background-color: white;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 27%;
+            right: 27%;
+            border-radius: 15px;
+        }
+        .wind5{
+            background-color: white;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 27%;
+            right: 42%;
+            border-radius: 15px;
+        }
+        .wind6{
+            background-color: white;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 27%;
+            right: 57%;
+            border-radius: 15px;
+        }
+        .wind7{
+            background-color: white;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 27%;
+            right: 13%;
+            border-radius: 15px;
+        }
+
+        .robo-earth{
+            position: relative;
+        }
+        .earth{
+            background-color: chocolate;
+            height: 30vh;
+           
+        }
+        .robo1{
+            position: absolute;
+            top: 3%; 
+            left: 20%;   
+            animation-name: robo1;
+            animation-duration: 11s;
+            animation-iteration-count: infinite;
+            z-index: -1;
+        }
+        @keyframes robo1 {
+            0%   { transform: translateY(0px); }
+            25%  {transform: translateY(-100px);}
+            100%  { transform: translateY(0px); }
+        }
+        .robo2{
+            position: absolute;
+            top: 3%;   
+            left: 30%;   
+            animation-name: robo2;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            z-index: -1;
+        }
+        @keyframes robo2 {
+            0%   { transform: translateY(0px); }
+            25%  {transform: translateY(-100px);}
+            100%  { transform: translateY(0px); }
+        }
+        .robo3{
+            position: absolute;
+            top: 3%; 
+            left: 50%;      
+            animation-name: robo3;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            z-index: -1;
+        }
+        @keyframes robo3 {
+            0%   { transform: translateY(0px); }
+            25%  {transform: translateY(-100px);}
+            50%  { transform: translateY(0px); }
+            90%  { transform: translateY(-100px); }
+            100%   { transform: translateY(0px); }
+        }
+        .robo4{
+            position: absolute;
+            top: 3%; 
+            left: 10%;      
+            animation-name: robo4;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            z-index: -1;
+        }
+        @keyframes robo4 {
+            0%   { transform: translateY(0px); }
+            25%  {transform: translateY(-100px);}
+            50%  { transform: translateY(0px); }
+            70%  { transform: translateY(-100px); }
+            100%  { transform: translateY(0px); }
+        }
+        .robo5{
+            position: absolute;
+            top: 3%; 
+            left: 65%;      
+            animation-name: robo5;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            z-index: -1;
+        }
+        @keyframes robo5 {
+            0%   { transform: translateY(0px); }
+            25%  {transform: translateY(-100px);}
+            50%  { transform: translateY(0px); }
+            70%  { transform: translateY(-100px); }
+            100%  { transform: translateY(0px); }
+        }
+        .robo6{
+            position: absolute;
+            top: -40%;
+            left: 80%;      
+            animation-name: robo6;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            z-index: -1;
+        }
+        @keyframes robo6 {
+            0%   { opacity: 0; }
+            5%  {opacity: 1;}
+            100%  { opacity: 0; }
+        }
+        .green-robo{
+            border-top: 75px solid green;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+        }
+        .red-robo{
+            border-top: 120px solid red;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            margin-top: -30px;
+        }
+    </style>
+    <div>
+        <iframe width="0" height="0" src="https://www.youtube.com/embed/KfHUcwiINu4?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute;"></iframe>
+        <div class="sky">
+            <div class="sunny">
+                <div class="black-glass-left"></div>
+                <div class="black-glass-center"></div>
+                <div class="black-glass-right"></div>
+                <div class="mouse"></div>
+                <div class="teeth"></div>
+                <div class="tongue"></div>
+                <div class="sunny-one"></div>
+                <div class="sunny-two"></div>
+                <div class="sunny-three"></div>
+                <div class="sunny-four"></div>
+                <div class="sunny-five"></div>
+                <div class="sunny-six"></div>
+            </div>
+            <div class="wind1"></div>
+            <div class="wind2"></div>
+            <div class="wind3"></div>
+            <div class="wind4"></div>
+            <div class="wind5"></div>
+            <div class="wind6"></div>
+            <div class="wind7"></div>
+            <div class="height-robo">
+                我愛lnB高利蘿蔔
+            </div>
+        </div>
+
+        <div class="robo-earth">
+            <div class="earth"></div>
+            <div class="robo1">
+                <div class="green-robo"></div>
+                <div class="red-robo"></div>
+            </div>
+            <div class="robo2">
+                <div class="green-robo"></div>
+                <div class="red-robo"></div>
+            </div>
+            <div class="robo3">
+                <div class="green-robo"></div>
+                <div class="red-robo"></div>
+            </div>
+            <div class="robo4">
+                <div class="green-robo"></div>
+                <div class="red-robo"></div>
+            </div>
+            <div class="robo5">
+                <div class="green-robo"></div>
+                <div class="red-robo"></div>
+            </div>
+            <div class="robo6">
+                <div class="green-robo"></div>
+                <div class="red-robo"></div>
+            </div>
+        </div>
+    </div>
+</html>
